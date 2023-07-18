@@ -35,7 +35,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className='md:hidden'>
-                <div>
+                    <div>
                         <div className='px-4'>
                             <p className='text-xl font-semibold'>Hello &#x1F44B;,</p>
                             <p className='mt-1 text-2xl tracking-wide font-bold'>What would you like to <span className='text-red-700'>eat?</span></p>
@@ -51,7 +51,7 @@ const Hero = () => {
                                 <BsSliders className='text-white text-xl'/>
                             </div>
                         </div>
-                </div>
+                    </div>
                 </div>
             </div>
 
