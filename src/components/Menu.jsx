@@ -20,18 +20,18 @@ const Menu = () => {
                 <p className='text-2xl font-semibold'>Our Menu</p>
                 <p className='font-medium'>We provide the best food service for you</p>
             </div>
-            <ul className='flex md:space-x-2 lg:space-x-4'>
-                <button onClick={() => setDataItems(items)} className='hover:bg-red-800 hover:text-white w-20 h-8 rounded-md flex justify-center items-center outline-none'>
-                    <li className='font-semibold text-lg'>All</li>
+            <ul className='flex space-x-3 md:space-x-2 lg:space-x-4'>
+                <button onClick={() => setDataItems(items)} className='bg-red-800 hover:bg-red-700 hover:text-white w-20 h-8 rounded-full shadow-sm flex justify-center items-center outline-none'>
+                    <li className='font-semibold text-lg text-white'>All</li>
                 </button>
-                <button onClick={() => filterCategory('meals')} className='hover:bg-red-800 hover:text-white w-20 h-8 rounded-md flex justify-center items-center outline-none'>
-                    <li className='font-semibold text-lg'>Meals</li>
+                <button onClick={() => filterCategory('meals')} className='bg-red-800 hover:bg-red-700 hover:text-white w-20 h-8 rounded-full shadow-sm flex justify-center items-center outline-none'>
+                    <li className='font-semibold text-lg text-white'>Meals</li>
                 </button>
-                <button onClick={() => filterCategory('snacks')} className='hover:bg-red-800 hover:text-white w-20 h-8 rounded-md flex justify-center items-center outline-none'>
-                    <li className='font-semibold text-lg'>Snacks</li>
+                <button onClick={() => filterCategory('snacks')} className='bg-red-800 hover:bg-red-700 hover:text-white w-20 h-8 rounded-full shadow-sm flex justify-center items-center outline-none'>
+                    <li className='font-semibold text-lg text-white'>Snacks</li>
                 </button>
-                <button onClick={() => filterCategory('drinks')} className='hover:bg-red-800 hover:text-white w-20 h-8 rounded-md flex justify-center items-center outline-none'>
-                    <li className='font-semibold text-lg'>Drinks</li>
+                <button onClick={() => filterCategory('drinks')} className='bg-red-800 hover:bg-red-700 hover:text-white w-20 h-8 rounded-full shadow-sm justify-center items-center outline-none'>
+                    <li className='font-semibold text-lg text-white'>Drinks</li>
                 </button>
             </ul>
         </div>
@@ -43,7 +43,7 @@ const Menu = () => {
                     <div className='flex flex-col items-center space-y-2 mt-1'>
                         <p className='font-semibold text-lg'>{item.name}</p>
                         <p className='font-bold tracking-wide'>#{item.price}</p>
-                        <button className='border-2 border-red-700 px-2 py-1 rounded-md hover:bg-red-100 hidden md:inline-block outline-none'>
+                        <button className='border-2 border-red-700 px-2 py-1 rounded-md hover:bg-red-100 outline-none'>
                             <p className='text-red-700 font-bold'>Add to cart</p>
                         </button>
                     </div>

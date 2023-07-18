@@ -172,3 +172,12 @@ export const items = [
         price: '800'
     }
 ]
+
+export const itemSpecial = [
+    {
+        id: 1,
+        name: 'Rice With Zucchini, Soft Boiled Egg, and Parsley',
+        image: 'https://images.pexels.com/photos/1410235/pexels-photo-1410235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        price: '2000'
+    }
+]
