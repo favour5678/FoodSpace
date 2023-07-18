@@ -173,7 +173,7 @@ export const items = [
     }
 ]
 
-export const itemSpecial = [
+export const specialItem = [
     {
         id: 1,
         name: 'Rice With Zucchini, Soft Boiled Egg, and Parsley',
