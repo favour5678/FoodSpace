@@ -10,6 +10,7 @@ import { AiFillTag } from 'react-icons/ai'
 import { RiCheckboxCircleLine } from 'react-icons/ri'
 import Menu from './Menu';
 import CustomerReview from './CustomerReview';
+import Footer from './Footer';
 
 const Hero = () => {
     const deliveryManImage = 'https://cdni.iconscout.com/illustration/premium/thumb/male-delivery-executive-wearing-food-delivery-backpack-4743175-3951678.png'
@@ -137,6 +138,7 @@ const Hero = () => {
             </div>
             <Menu />
             <CustomerReview />
+            <Footer />
         </main>
     </div>
   )
