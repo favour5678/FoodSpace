@@ -1,9 +1,13 @@
 import React from 'react'
+import Navbar from './Navbar';
 
 const Cart = () => {
   return (
-    <div>Cart</div>
+    <div>
+        <Navbar />
+        
+    </div>
   )
 }
 
-export default Cart
+export default Cart;
