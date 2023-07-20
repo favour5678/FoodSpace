@@ -14,7 +14,7 @@ const CustomerReview = () => {
         </div>
         <div className='flex justify-center flex-col lg:flex-row items-center mt-20 lg:mt-24'>
             <img src={customerPic} alt="customer's image" className='h-72 md:h-[60vh]'/>
-            <div className='relative flex flex-col justify-center bg-gray-200 opacity-[90%] pl-10 w-4/5 lg:full  lg:pr-72 py-10 rounded-lg lg:rounded-r-lg'>
+            <div className='relative flex flex-col justify-center bg-gray-200 opacity-[90%] pl-10 w-[90%] md:w-full lg:full  lg:pr-72 py-10 rounded-lg lg:rounded-r-lg'>
                 <FaQuoteRight className='text-red-400 text-[40px] lg:text-[65px] absolute -top-3 md:-top-5 left-[90%] lg:left-[80%]'/>
                 <p className='text-xl font-bold'>Adeniyi Isaac</p>
                 <p className='font-bold text-gray-800'>Graduate, Nigeria</p>
