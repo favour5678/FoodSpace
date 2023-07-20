@@ -24,7 +24,7 @@ const Navbar = () => {
                 <Link className='text-lg text-gray-700 font-semibold hover:text-gray-500 outline-none'>Menu</Link>
                 <Link className='text-lg text-gray-700 font-semibold hover:text-gray-500 outline-none'>Contact</Link>
                 <Link className='text-lg text-gray-700 font-semibold hover:text-gray-500 uppercase outline-none'>Faq</Link>
-                <Link>
+                <Link to={'storeCart'}>
                     <FaCartShopping className='text-2xl text-gray-700 font-semibold hover:text-gray-500 uppercase outline-none' />
                 </Link>
             </div>
