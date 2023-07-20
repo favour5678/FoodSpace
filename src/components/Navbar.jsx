@@ -19,11 +19,14 @@ const Navbar = () => {
             <div>
                 <img src={foodspace} alt="foodspace logo" className='h-12 hidden md:inline-block'/>
             </div>
-            <div className='space-x-10 hidden md:inline-block'>
+            <div className='space-x-10 hidden md:flex items-center'>
                 <Link className='text-lg text-gray-700 font-semibold hover:text-gray-500 outline-none'>Home</Link>
                 <Link className='text-lg text-gray-700 font-semibold hover:text-gray-500 outline-none'>Menu</Link>
                 <Link className='text-lg text-gray-700 font-semibold hover:text-gray-500 outline-none'>Contact</Link>
                 <Link className='text-lg text-gray-700 font-semibold hover:text-gray-500 uppercase outline-none'>Faq</Link>
+                <Link>
+                    <FaCartShopping className='text-2xl text-gray-700 font-semibold hover:text-gray-500 uppercase outline-none' />
+                </Link>
             </div>
             <Link className='border-2 border-red-400 px-6 py-1 rounded-md hover:bg-red-100 hidden md:inline-block outline-none'>
                 <div className='text-lg text-red-500 hover:text-red-600 font-semibold'>Login</div>
