@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import Hero from "../components/Hero";
+import Hero from "../pages/Hero";
 import Index from "../components/Index";
-import Cart from "../components/Cart";
+import Cart from "../pages/Cart";
 
 const Router = createBrowserRouter([
     {

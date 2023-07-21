@@ -1,6 +1,5 @@
 import React from 'react'
-import Navbar from './Navbar'
-import BottomNavbar from './BottomNavbar';
+// import BottomNavbar from './BottomNavbar';
 import { BsSliders } from 'react-icons/bs'
 import { CiSearch } from 'react-icons/ci'
 import { MdOutlineAppRegistration } from 'react-icons/md'
@@ -10,7 +9,8 @@ import { AiFillTag } from 'react-icons/ai'
 import { RiCheckboxCircleLine } from 'react-icons/ri'
 import Menu from './Menu';
 import CustomerReview from './CustomerReview';
-import Footer from './Footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer'
 
 const Hero = () => {
     const deliveryManImage = 'https://cdni.iconscout.com/illustration/premium/thumb/male-delivery-executive-wearing-food-delivery-backpack-4743175-3951678.png'
