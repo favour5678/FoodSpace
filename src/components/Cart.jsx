@@ -6,6 +6,7 @@ const Cart = () => {
     <div>
         <Navbar />
         <div>Wow</div>
+        <div>Wow</div>
     </div>
   )
 }
