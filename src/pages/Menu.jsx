@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { items, specialItem } from '../data/items';
+import { ShopContext } from '../context/ShopContext';
 
 const Menu = () => {
     const [dataItems, setDataItems] = useState(items)
+    // console.log(dataItems.find(i => i.id))
     const [itemSpecial, setItemSpecial] = useState(specialItem)
-    // console.log(itemSpecial);
 
     const filterCategory = (categories) => {
         setDataItems(
@@ -13,7 +14,11 @@ const Menu = () => {
             })
         )
     };
-  
+
+    const { addToCart, cartItems} = useContext(ShopContext)
+
+    // const cartItemAmount = cartItems[dataItems.map(item => item.id)]
+
     return (
     <div className='container md:px-3 lg:px-0 mx-auto -mt-6 md:mt-24'>
         <div className='flex justify-center md:justify-between items-end'>
@@ -64,7 +69,9 @@ const Menu = () => {
                         <div className='flex flex-col items-center space-y-2 mt-1'>
                             <p className='font-semibold text-lg'>{item.name}</p>
                             <p className='font-bold tracking-wide'>#{item.price}</p>
-                            <button className='border-2 text-red-700 font-bold border-red-700 px-2 py-1 rounded-md hover:bg-red-100 outline-none'>Add to Cart</button>
+                            <button className='border-2 text-red-700 font-bold border-red-700 px-2 py-1 rounded-md hover:bg-red-100 outline-none' onClick={() => addToCart(item.id)}>
+                                Add to Cart 
+                            </button>
                         </div>
                     </div>
                 ))}
@@ -73,5 +80,5 @@ const Menu = () => {
     </div>
   )
 }
-
+// {cartItemAmount > 0 && <>({cartItemAmount})</>}
 export default Menu;

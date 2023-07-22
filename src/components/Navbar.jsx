@@ -20,7 +20,7 @@ const Navbar = () => {
                 <img src={foodspace} alt="foodspace logo" className='h-12 hidden md:inline-block'/>
             </div>
             <div className='space-x-10 hidden md:flex items-center'>
-                <Link className='text-lg text-gray-700 font-semibold hover:text-gray-500 outline-none'>Home</Link>
+                <Link to={'/heroPage'} className='text-lg text-gray-700 font-semibold hover:text-gray-500 outline-none'>Home</Link>
                 <Link className='text-lg text-gray-700 font-semibold hover:text-gray-500 outline-none'>Menu</Link>
                 <Link className='text-lg text-gray-700 font-semibold hover:text-gray-500 outline-none'>Contact</Link>
                 <Link className='text-lg text-gray-700 font-semibold hover:text-gray-500 uppercase outline-none'>Faq</Link>
