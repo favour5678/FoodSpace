@@ -64,9 +64,7 @@ const Menu = () => {
                         <div className='flex flex-col items-center space-y-2 mt-1'>
                             <p className='font-semibold text-lg'>{item.name}</p>
                             <p className='font-bold tracking-wide'>#{item.price}</p>
-                            <button className='border-2 border-red-700 px-2 py-1 rounded-md hover:bg-red-100 outline-none'>
-                                <p className='text-red-700 font-bold'>Add to cart</p>
-                            </button>
+                            <button className='border-2 text-red-700 font-bold border-red-700 px-2 py-1 rounded-md hover:bg-red-100 outline-none'>Add to Cart</button>
                         </div>
                     </div>
                 ))}
