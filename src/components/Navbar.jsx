@@ -33,48 +33,51 @@ const Navbar = () => {
                 <div className='text-base text-red-500 hover:text-red-600 font-semibold'>Login</div>
             </Link>
         </div>
+        
+        {/* Mobile Section */}
 
         {isOpen ? <div className='bg-black opacity-60 fixed w-full h-screen top-0 left-0'></div> : ''}
 
         <div className='h-16 w-full bg-white flex justify-between items-center px-5 border-b-2 shadow-md md:hidden'>
             <div onClick={() => setIsOpen(!isOpen)} className='text-gray-900 cursor-pointer outline-none'>
-                <FaBars className='text-2xl'/>
+                <FaBars className='text-xl'/>
             </div>
-            <FaCartShopping className='text-2xl text-gray-900 outline-none' />
+            <Link>
+                <FaCartShopping className='text-xl text-gray-900 outline-none' />
+            </Link>
             <div className={isOpen ? 'bg-red-700 h-screen w-1/2 absolute top-0 left-0 duration-1000' : 'bg-red-700 h-screen w-3/4 absolute top-0 left-[-100%] duration-1000'}>
-                <div className='flex justify-between px-4 mt-7'>
-                    <FaBars className='text-2xl cursor-pointer'/>
-                    <AiOutlineCloseCircle onClick={() => setIsOpen(!isOpen)} className='text-white text-3xl cursor-pointer' />
+                <div className='flex justify-end px-4 mt-7'>
+                    <AiOutlineCloseCircle onClick={() => setIsOpen(!isOpen)} className='text-white text-2xl cursor-pointer' />
                 </div>
                 <div className='space-y-7 mt-16'>
                     <Link className='flex items-center text-white space-x-3 px-2 outline-none'>
-                        <IoIosContact className='text-2xl'/>
-                        <p className='text-lg'>Profile</p>
+                        <IoIosContact className='text-xl'/>
+                        <p>Profile</p>
                     </Link>
                     <div className='border-t border-gray-300 w-[96%] mx-auto'></div>
                     <Link className='flex items-center text-white space-x-3 px-2 outline-none'>
-                        <MdTrolley className='text-2xl'/>
-                        <p className='text-lg'>My Orders</p>
+                        <MdTrolley className='text-xl'/>
+                        <p>My Orders</p>
                     </Link>
                     <div className='border-t border-gray-300 w-[96%] mx-auto'></div>
                     <Link className='flex items-center text-white space-x-3 px-2 outline-none'>
-                        <MdOutlinePrivacyTip className='text-2xl'/>
-                        <p className='text-lg'>Privacy Policy</p>
+                        <MdOutlinePrivacyTip className='text-xl'/>
+                        <p>Privacy Policy</p>
                     </Link>
                     <div className='border-t border-gray-300 w-[96%] mx-auto'></div>
                     <Link className='flex items-center text-white space-x-3 px-2 outline-none'>
-                        <FaGear className='text-2xl'/>
-                        <p className='text-lg'>Settings</p>
+                        <FaGear className='text-xl'/>
+                        <p>Settings</p>
                     </Link>
                     <div className='border-t border-gray-300 w-[96%] mx-auto'></div>
                     <Link className='flex items-center text-white space-x-3 px-2 outline-none'>
-                        <BiHelpCircle className='text-2xl'/>
-                        <p className='text-lg'>Help</p>
+                        <BiHelpCircle className='text-xl'/>
+                        <p>Help</p>
                     </Link>
                     <div className='border-t border-gray-300 w-[96%] mx-auto'></div>
                     <Link className='flex items-center text-white space-x-3 px-2 outline-none'>
-                        <LiaSignOutAltSolid className='text-2xl'/>
-                        <p className='text-lg'>Sign Out</p>
+                        <LiaSignOutAltSolid className='text-xl'/>
+                        <p>Sign Out</p>
                     </Link>
                     <div className='border-t border-gray-200 w-[96%] mx-auto'></div>
                 </div>
