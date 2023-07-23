@@ -25,8 +25,8 @@ const Hero = () => {
                 <div className='hidden md:flex justify-around items-start mt-4 lg:justify-between lg:mx-1 xl:justify-around'>
                     <div className='mt-2'>
                         <div className='text-red-700 text-xl tracking-wide font-bold'>The best choice for you!</div>
-                        <div className='md:text-[32px] lg:text-[44px] text-gray-900 font-bold leading-snug pt-6'>The Fastest in <br /> Delivering your <span className='text-red-700'>Food</span></div>
-                        <div className='text-xl font-medium pt-1'>We fill your tummy with our <br /> delicious and fast made food</div>
+                        <div className='md:text-[32px] lg:text-[40px] text-gray-900 font-bold leading-snug pt-6'>The Fastest in <br /> Delivering your <span className='text-red-700'>Food</span></div>
+                        <div className='text-lg font-medium pt-1'>We fill your tummy with our <br /> delicious and fast made food</div>
                         <button className='bg-red-700 rounded mt-6'>
                             <div className='text-white px-3 py-2'>Order Now</div>
                         </button>
@@ -58,52 +58,52 @@ const Hero = () => {
 
             <div className='mt-20 hidden md:block'>
                 <div className='text-center'>
-                    <p className='text-4xl font-semibold'>Best <span className='text-red-700'>Services</span> for you</p>
+                    <p className='text-3xl font-semibold'>Best <span className='text-red-700'>Services</span> for you</p>
                     <p className='text-lg font-medium mt-2 tracking-wide'>Enjoy our best delivery service for your ordering satisfaction</p>
                 </div>
             </div>
 
             <div className='container mx-auto hidden md:grid md:grid-cols-2 gap-6 lg:grid-cols-4 md:mt-10 lg:mt-14'>
                 <div className='flex items-center'>
-                    <div className='bg-gray-200 rounded-md w-[50px] h-14 flex items-center justify-center'>
-                        <MdOutlineAppRegistration className='text-4xl text-red-700'/>
+                    <div className='bg-gray-200 rounded-md w-[40px] h-12 flex items-center justify-center'>
+                        <MdOutlineAppRegistration className='text-3xl text-red-700'/>
                     </div>
-                    <div className='leading-5 ml-2'>
-                        <p className='font-bold md:text-base lg:text-lg'>Free Registration</p>
-                        <p>For our regular customers</p>
-                    </div>
-                </div>
-                <div className='flex items-center'>
-                    <div className='bg-gray-200 rounded-md w-[50px] h-14 flex items-center justify-center'>
-                        <BiMedal className='text-4xl text-red-700'/>
-                    </div>
-                    <div className='leading-5 ml-2'>
-                        <p className='font-bold md:text-base lg:text-lg'>Overall Guarantee</p>
-                        <p>For our well prepared meals</p>
+                    <div className='leading-7 ml-2'>
+                        <p className='font-bold'>Free Registration</p>
+                        <p className='text-sm'>For our regular customers</p>
                     </div>
                 </div>
                 <div className='flex items-center'>
-                    <div className='bg-gray-200 rounded-md w-[50px] h-14 flex items-center justify-center'>
-                        <HiBadgeCheck className='text-4xl text-red-700'/>
+                    <div className='bg-gray-200 rounded-md w-[40px] h-12 flex items-center justify-center'>
+                        <BiMedal className='text-3xl text-red-700'/>
                     </div>
-                    <div className='leading-5 ml-2'>
-                        <p className='font-bold md:text-base lg:text-lg'>Free Consulting <span className='text-gray-400 text-sm font-normal'>24/7</span></p>
-                        <p>For your feeding wants</p>
+                    <div className='leading-7 ml-2'>
+                        <p className='font-bold'>Overall Guarantee</p>
+                        <p className='text-sm'>For our well prepared meals</p>
                     </div>
                 </div>
                 <div className='flex items-center'>
-                    <div className='bg-gray-200 rounded-md w-[50px] h-14 flex items-center justify-center'>
-                        <AiFillTag className='text-4xl text-red-700'/>
+                    <div className='bg-gray-200 rounded-md w-[40px] h-12 flex items-center justify-center'>
+                        <HiBadgeCheck className='text-3xl text-red-700'/>
                     </div>
-                    <div className='leading-5 ml-2'>
-                        <p className='font-bold md:text-base lg:text-lg'>Special Pride</p>
-                        <p>For undoubted best <br /> customer service</p>
+                    <div className='leading-7 ml-2'>
+                        <p className='font-bold'>Free Consulting <span className='text-gray-400 text-sm font-normal'>24/7</span></p>
+                        <p className='text-sm'>For your feeding wants</p>
+                    </div>
+                </div>
+                <div className='flex items-center'>
+                    <div className='bg-gray-200 rounded-md w-[40px] h-12 flex items-center justify-center'>
+                        <AiFillTag className='text-3xl text-red-700'/>
+                    </div>
+                    <div className='leading-7 ml-2'>
+                        <p className='font-bold'>Special Pride</p>
+                        <p className='text-sm'>For undoubted best <br /> customer service</p>
                     </div>
                 </div>
             </div>
 
             <div className='container mx-auto mt-20 lg:mt-32'>
-                <div className='hidden md:flex  g:flex-row justify-around rounded-lg'>
+                <div className='hidden md:flex lg:flex-row justify-around rounded-lg'>
                     <div className='relative flex md:items-center lg:items-start'>
                         <img src={yamEggSauceImage} alt="yam & egg sauce" className='rounded-xl h-[250px] lg:h-max'/>
                         <div className='bg-white opacity-[80%] w-[90%] h-[90px] flex justify-around absolute top-[10%] left-[5%] rounded-md'>
