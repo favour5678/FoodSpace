@@ -17,20 +17,20 @@ const Navbar = () => {
     <div className='container max-w-full fixed z-50'>
         <div className='sm:hidden md:h-20 md:flex md:justify-around md:items-center bg-white border-b-2 shadow-md'>
             <div>
-                <img src={foodspace} alt="foodspace logo" className='h-12 hidden md:inline-block'/>
+                <img src={foodspace} alt="foodspace logo" className='h-11 hidden md:inline-block'/>
             </div>
             <div className='space-x-10 hidden md:flex items-center'>
                 <Link to={'/heroPage'} className='text-lg text-gray-700 font-semibold hover:text-gray-500 outline-none'>Home</Link>
-                <Link className='text-lg text-gray-700 font-semibold hover:text-gray-500 outline-none'>Menu</Link>
-                <Link className='text-lg text-gray-700 font-semibold hover:text-gray-500 outline-none'>Contact</Link>
-                <Link className='text-lg text-gray-700 font-semibold hover:text-gray-500 uppercase outline-none'>Faq</Link>
+                <Link className='text-base text-gray-700 font-semibold hover:text-gray-500 outline-none'>Menu</Link>
+                <Link className='text-base text-gray-700 font-semibold hover:text-gray-500 outline-none'>Contact</Link>
+                <Link className='text-base text-gray-700 font-semibold hover:text-gray-500 uppercase outline-none'>Faq</Link>
                 <Link to={'storeCart'} className='flex'>
-                    <FaCartShopping className='text-2xl text-gray-700 font-semibold hover:text-gray-500 uppercase outline-none' />
+                    <FaCartShopping className='text-xl text-gray-700 font-semibold hover:text-gray-500 uppercase outline-none' />
                     <p className='font-semibold'></p>
                 </Link>
             </div>
             <Link className='border-2 border-red-400 px-6 py-1 rounded-md hover:bg-red-100 hidden md:inline-block outline-none'>
-                <div className='text-lg text-red-500 hover:text-red-600 font-semibold'>Login</div>
+                <div className='text-base text-red-500 hover:text-red-600 font-semibold'>Login</div>
             </Link>
         </div>
 
