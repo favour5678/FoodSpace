@@ -4,11 +4,11 @@ import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs'
 
 const Footer = () => {
   return (
-    <div className='container mx-auto mt-28 lg:mt-36'>
+    <div className='container mx-auto mt-20 lg:mt-36'>
         <div className='flex justify-around'>
             <div className='flex flex-col items-center space-y-3'>
                 <img src={foodspace} alt='foodspace logo' className='h-8 md:h-11'/>
-                <p className='space-x-5'>
+                <p className='space-x-3 md:space-x-5'>
                     <button>
                         <BsFacebook className='text-lg md:text-xl text-gray-800'/>
                     </button>
@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
             <div className='flex flex-col items-center space-y-1.5'>
                 <button>
-                    <p className='text-lg md:text-xl font-bold'>Menu</p>
+                    <p className='md:text-xl font-bold'>Menu</p>
                 </button>
                 <button className='text-gray-600 font-semibold'>Home</button>
                 <button className='text-gray-600 font-semibold'>Drinks</button>
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
             <div className='flex flex-col items-center space-y-1.5'>
                 <button>
-                    <p className='text-lg md:text-xl font-bold'>Service</p>
+                    <p className='md:text-xl font-bold'>Service</p>
                 </button>
                 <button className='text-gray-600 font-semibold'>Meals Update</button>
                 <button className='text-gray-600 font-semibold'>Track Order</button>
@@ -39,13 +39,13 @@ const Footer = () => {
             </div>
             <div className='flex flex-col items-center space-y-1.5'>
                 <button>
-                    <p className='text-lg md:text-xl font-bold'>Further Information</p>
+                    <p className='md:text-xl font-bold'>Further Information</p>
                 </button>
                 <button className='text-gray-600 font-semibold'>Terms & Conditions</button>
                 <button className='text-gray-600 font-semibold'>Privacy Policy</button>
             </div>
         </div>
-        <p className='text-gray-600 font-semibold text-center mt-14  lg:mt-20 mb-6 tracking-wide'>Copyright &copy; 2022 FoodSpace. All Rights Reserved.</p>
+        <p className='text-gray-600 text-sm font-semibold text-center mt-14 lg:mt-16 tracking-wide'>Copyright &copy; 2022 FoodSpace. All Rights Reserved.</p>
     </div>
   )
 }

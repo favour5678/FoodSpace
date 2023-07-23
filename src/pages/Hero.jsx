@@ -38,11 +38,11 @@ const Hero = () => {
                 <div className='md:hidden'>
                     <div>
                         <div className='px-4'>
-                            <p className='text-xl font-semibold'>Hello &#x1F44B;,</p>
-                            <p className='mt-1 text-2xl tracking-wide font-bold'>What would you like to <span className='text-red-700'>eat?</span></p>
+                            <p className='text-lg font-semibold'>Hello &#x1F44B;,</p>
+                            <p className='mt-1 text-xl tracking-wide font-bold'>What would you like to <span className='text-red-700'>eat?</span></p>
                         </div>
                         <div className='flex justify-around items-center mt-5'>
-                            <label className='flex items-center bg-white border-gray-200 border-t-[3px] border-b-[3px] border-l border-r rounded-lg shadow-sm w-[90%] mx-3'>
+                            <label className='flex items-center bg-white border-gray-200 border-t-[2px] border-b-[2px] border-l border-r rounded-lg shadow-sm w-[85%]'>
                                 <button className='px-2'>
                                     <CiSearch className='text-xl text-gray-300'/>
                                 </button>

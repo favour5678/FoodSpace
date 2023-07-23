@@ -9,16 +9,16 @@ const CustomerReview = () => {
   return (
     <div className='container mx-auto mt-16 lg:mt-24'>
         <div className='text-center space-y-2'>
-            <p className='text-3xl font-bold'>Our <span className='text-red-700'>Customer</span> says</p>
+            <p className='text-2xl font-bold'>Our <span className='text-red-700'>Customer</span> says</p>
             <p className='text-lg font-semibold text-gray-900 tracking-wide'>What our lovely customer said for our products</p>
         </div>
         <div className='flex justify-center flex-col lg:flex-row items-center mt-20 lg:mt-24'>
             <img src={customerPic} alt="customer's image" className='h-72 md:h-[60vh]'/>
             <div className='relative flex flex-col justify-center bg-gray-200 opacity-[90%] pl-10 w-[90%] md:w-full lg:full  lg:pr-72 py-10 rounded-lg lg:rounded-r-lg'>
                 <FaQuoteRight className='text-red-400 text-[40px] lg:text-[65px] absolute -top-3 md:-top-5 left-[90%] lg:left-[80%]'/>
-                <p className='text-xl font-bold'>Adeniyi Isaac</p>
-                <p className='font-bold text-gray-800'>Graduate, Nigeria</p>
-                <p className='text-red-700 font-bold tracking-wide mt-3 md:mt-5'>I'd say that, this is one of the best food ordering app that I have ever used. Their customer service is so great.</p>
+                <p className='text-lg font-bold'>Adeniyi Isaac</p>
+                <p className='font-semibold text-gray-800'>Graduate, Nigeria</p>
+                <p className='text-red-700 font-semibold tracking-wide mt-3 md:mt-5'>I'd say that, this is one of the best food ordering app that I have ever used. Their customer service is so great.</p>
             </div>
         </div>
     </div>
