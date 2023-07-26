@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div id='contact' className='container mx-auto mt-20 lg:mt-28'>
+    <div id='contact' className='container mx-auto mt-12 lg:mt-28'>
         <div className='flex justify-around'>
             <div className='flex flex-col items-center space-y-3'>
                 <img src={foodspace} alt='foodspace logo' className='h-8 md:h-11'/>

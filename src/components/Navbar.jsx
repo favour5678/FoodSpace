@@ -41,6 +41,9 @@ const Navbar = () => {
             <div onClick={() => setIsOpen(!isOpen)} className='text-gray-900 cursor-pointer outline-none'>
                 <FaBars className='text-xl'/>
             </div>
+            <div>
+                <img src={foodspace} alt="foodspace logo" className='h-10'/>
+            </div>
             <Link>
                 <FaCartShopping className='text-xl text-gray-900 outline-none' />
             </Link>
