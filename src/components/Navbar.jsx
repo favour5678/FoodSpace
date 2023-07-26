@@ -28,7 +28,7 @@ const Navbar = () => {
                     <p className='font-semibold'></p>
                 </Link>
             </div>
-            <Link className='border-2 border-red-400 px-6 py-1 rounded-md hover:bg-red-100 hidden md:inline-block outline-none'>
+            <Link to={'/'} className='border-2 border-red-400 px-6 py-1 rounded-md hover:bg-red-100 hidden md:inline-block outline-none'>
                 <div className='text-base text-red-500 hover:text-red-600 font-semibold'>Login</div>
             </Link>
         </div>
