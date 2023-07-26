@@ -1,5 +1,6 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 import { items } from '../data/items'
+
 
 export const ShopContext = createContext(null)
 
@@ -14,14 +15,33 @@ const getDefaultCart = () => {
 export const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart())
 
+    useEffect(() => {
+        const cartData = localStorage.getItem('cartItems')
+        if (cartData) {
+            const parsedCart = JSON.parse(cartData)
+            setCartItems(parsedCart)
+        }
+    }, [cartItems])
+
+    const saveCartToLocalStorage = (cart) => {
+        const cartJson = JSON.stringify(cart)
+        localStorage.setItem('cartItem', cartJson)
+      }
+
     const addToCart = (itemId) => {
         setCartItems(prevItem => (
             {...prevItem, [itemId]: prevItem[itemId] + 1}))
+        saveCartToLocalStorage({
+            ...cartItems, [itemId]: cartItems[itemId] + 1
+        })
     }
 
     const removeFromCart = (itemId) => {
         setCartItems(prevItem => (
             {...prevItem, [itemId]: prevItem[itemId] - 1 }))
+        saveCartToLocalStorage({
+            ...cartItems, [itemId]: cartItems[itemId] - 1
+        })
     }
 
     const updateItemCartAmount = (newAmount, itemId) => {
@@ -45,10 +65,11 @@ export const ShopContextProvider = (props) => {
         addToCart,
         removeFromCart,
         updateItemCartAmount,
-        getTotalCartAmount
+        getTotalCartAmount,
+        // saveCartToLocalStorage
     }
 
-    console.log(cartItems)
+    // console.log(cartItems)
 
   return (
     <ShopContext.Provider value={contextValue}>
@@ -56,3 +77,7 @@ export const ShopContextProvider = (props) => {
     </ShopContext.Provider>
   )
 }
+
+// useEffect(() => {
+//     localStorage.setItem('cartItems', JSON.stringify(cartItems))
+// }, [cartItems])

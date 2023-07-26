@@ -18,6 +18,7 @@ const Menu = () => {
     const { addToCart, cartItems} = useContext(ShopContext)
 
     // const cartItemAmount = cartItems[dataItems.map(item => item.id)]
+    // console.log(cartItemAmount)
 
     return (
     <div className='container md:px-3 lg:px-0 mx-auto -mt-6 md:mt-24'>
@@ -70,7 +71,7 @@ const Menu = () => {
                             <p className='font-bold'>{item.name}</p>
                             <p className='font-bold tracking-wide'>#{item.price}</p>
                             <button className='border-2 text-red-700 font-bold border-red-700 px-2 py-1 rounded-md hover:bg-red-100 outline-none' onClick={() => addToCart(item.id)}>
-                                Add to Cart 
+                                Add to Cart
                             </button>
                         </div>
                     </div>
