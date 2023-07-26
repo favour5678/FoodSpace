@@ -1,23 +1,24 @@
 import React from 'react'
 import foodspace from '../assets/foodspace.png'
 import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div className='container mx-auto mt-20 lg:mt-36'>
+    <div id='contact' className='container mx-auto mt-20 lg:mt-36'>
         <div className='flex justify-around'>
             <div className='flex flex-col items-center space-y-3'>
                 <img src={foodspace} alt='foodspace logo' className='h-8 md:h-11'/>
-                <p className='space-x-3 md:space-x-5'>
-                    <button>
+                <p className='flex space-x-3 md:space-x-5'>
+                    <Link>
                         <BsFacebook className='text-lg md:text-xl text-gray-800'/>
-                    </button>
-                    <button>
+                    </Link>
+                    <Link>
                         <BsTwitter className='text-lg md:text-xl text-gray-800'/>
-                    </button>
-                    <button>
+                    </Link>
+                    <Link>
                         <BsInstagram className='text-lg md:text-xl text-gray-800'/>
-                    </button>
+                    </Link>
                 </p>
             </div>
             <div className='flex flex-col items-center space-y-1.5'>

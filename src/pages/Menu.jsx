@@ -21,7 +21,7 @@ const Menu = () => {
     // console.log(cartItemAmount)
 
     return (
-    <div className='container md:px-3 lg:px-0 mx-auto -mt-6 md:mt-24'>
+    <div id='menu' className='container md:px-3 lg:px-0 mx-auto -mt-6 md:pt-24'>
         <div className='flex justify-center md:justify-between items-end'>
             <div className='space-y-1 hidden md:block'>
                 <p className='text-2xl font-semibold'>Our Menu</p>

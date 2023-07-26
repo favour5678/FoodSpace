@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import foodspace from '../assets/foodspace.png'
-import { Link } from 'react-router-dom'
 import { FaBars, FaCartShopping, FaGear } from "react-icons/fa6";
 import { IoIosContact } from "react-icons/io"
 import { MdTrolley } from "react-icons/md"
@@ -8,11 +7,11 @@ import { MdOutlinePrivacyTip } from "react-icons/md"
 import { BiHelpCircle } from "react-icons/bi"
 import { LiaSignOutAltSolid } from "react-icons/lia"
 import { AiOutlineCloseCircle } from "react-icons/ai"
-
+import { HashLink as Link } from 'react-router-hash-link'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
-
+    
   return (
     <div className='container max-w-full fixed z-50'>
         <div className='sm:hidden md:h-20 md:flex md:justify-around md:items-center bg-white border-b-2 shadow-md'>
@@ -21,9 +20,9 @@ const Navbar = () => {
             </div>
             <div className='space-x-10 hidden md:flex items-center'>
                 <Link to={'/heroPage'} className='text-lg text-gray-700 font-semibold hover:text-gray-500 outline-none'>Home</Link>
-                <Link className='text-base text-gray-700 font-semibold hover:text-gray-500 outline-none'>Menu</Link>
-                <Link className='text-base text-gray-700 font-semibold hover:text-gray-500 outline-none'>Contact</Link>
-                <Link className='text-base text-gray-700 font-semibold hover:text-gray-500 uppercase outline-none'>Faq</Link>
+                <Link smooth to='#menu' className='text-base text-gray-700 font-semibold hover:text-gray-500 outline-none'>Menu</Link>
+                <Link smooth to='#contact' className='text-base text-gray-700 font-semibold hover:text-gray-500 outline-none'>Contact</Link>
+                <Link smooth to='#faq' className='text-base text-gray-700 font-semibold hover:text-gray-500 uppercase outline-none'>Faq</Link>
                 <Link to={'storeCart'} className='flex'>
                     <FaCartShopping className='text-xl text-gray-700 font-semibold hover:text-gray-500 uppercase outline-none' />
                     <p className='font-semibold'></p>
@@ -87,4 +86,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;
