@@ -3,10 +3,11 @@ import foodspace from '../assets/foodspace.png'
 import googleLogo from '../assets/googleLogo.png'
 import { Link } from 'react-router-dom';
 import * as yup from 'yup'
+import {AiOutlineLoading3Quarters} from 'react-icons/ai'
 
 const Index = () => {
     let [form, setForm] = useState({})
-    let [submitted, setSubmitted] = useState(false)
+    let [loading, setLoading] = useState(false)
     let [errors, setErrors] = useState({})
     let [messages, setMessages] = useState('')
 
@@ -25,21 +26,20 @@ const Index = () => {
 
     const handleSubmit = async(e) => {
         e.preventDefault()
-
+        
         try {
             await signUpSchema.validate(form, {abortEarly: false})
             setErrors({})
-
+            
             setMessages('Form submitted successfully')
-            setSubmitted(true)
+            setLoading(true)
         } catch (error) {
             let newError = {}
             error.inner.forEach(e => {
                 newError[e.path] = e.message
             });
-
+            
             setErrors(newError)
-            // setSubmitted(false)
         }
     }
 
@@ -69,10 +69,9 @@ const Index = () => {
                     <a href="#" className='text-red-700 font-semibold'>Forgot Password?</a>
                 </p>
             </div>
-            {/* {submitted ? <i>Loading please wait....</i> : <button type='submit' className='mt-6 md:px-40 py-1 md:py-2 lg:py-3 w-full bg-red-700 hover:bg-red-800 outline-none duration-300 rounded-full text-white uppercase tracking-wider lg:font-semibold'>Sign Up</button>} */}
 
-            {submitted && <i>Loading please wait....</i>}
-            <button disabled = {submitted} type='submit' className='mt-6 md:px-40 py-1 md:py-2 lg:py-3 w-full bg-red-700 hover:bg-red-800 outline-none duration-300 rounded-full text-white uppercase tracking-wider lg:font-semibold'>Sign Up</button>
+            {loading && <AiOutlineLoading3Quarters className='animate-spin'/>}
+            <button disabled={loading} type='submit' className='mt-6 md:px-40 py-1 md:py-2 lg:py-3 w-full bg-red-700 hover:bg-red-800 outline-none duration-300 rounded-full text-white uppercase tracking-wider lg:font-semibold'>Sign Up</button>
             
             <div className='flex justify-evenly items-center mt-6'>
                 <div className='w-[60px] md:w-[140px] h-[1px] bg-gray-300'></div>
