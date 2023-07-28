@@ -12,6 +12,7 @@ import CustomerReview from './CustomerReview';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
 import { ScrollToTop } from '../components/ScrollToTop'
+import BottomNavbar from '../components/BottomNavbar'
 
 const Hero = () => {
     const deliveryManImage = 'https://cdni.iconscout.com/illustration/premium/thumb/male-delivery-executive-wearing-food-delivery-backpack-4743175-3951678.png'
@@ -21,7 +22,7 @@ const Hero = () => {
   return (
     <div id='top'>
         <Navbar />
-        <main className='bg-green-300 w-full h-[100%] pt-24 md:pt-28'>
+        <main className='bg-gray-50 w-full h-[100%] pt-24 md:pt-28'>
             <div>
                 <div className='hidden md:flex justify-around items-start mt-4 lg:justify-between lg:mx-1 xl:justify-around'>
                     <div className='mt-2'>
@@ -141,6 +142,7 @@ const Hero = () => {
             <CustomerReview />
             <ScrollToTop />
             <Footer />
+            <BottomNavbar />
         </main>
     </div>
   )

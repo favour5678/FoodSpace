@@ -4,7 +4,6 @@ import { ShopContext } from '../context/ShopContext';
 
 const Menu = () => {
     const [dataItems, setDataItems] = useState(items)
-    // console.log(dataItems.find(i => i.id))
     const [itemSpecial, setItemSpecial] = useState(specialItem)
 
     const filterCategory = (categories) => {
@@ -17,9 +16,6 @@ const Menu = () => {
 
     const { addToCart, cartItems} = useContext(ShopContext)
 
-    // const cartItemAmount = cartItems[dataItems.map(item => item.id)]
-    // console.log(cartItemAmount)
-
     return (
     <div id='menu' className='container md:px-3 lg:px-0 mx-auto -mt-6 md:pt-24'>
         <div className='flex justify-center md:justify-between items-end'>
@@ -27,18 +23,18 @@ const Menu = () => {
                 <p className='text-2xl font-semibold'>Our Menu</p>
                 <p className='font-medium'>We provide the best food service for you</p>
             </div>
-            <ul className='flex space-x-10 md:space-x-2 lg:space-x-4'>
+            <ul className='flex overflow-x-auto space-x-10 md:space-x-2 lg:space-x-4'>
                 <button onClick={() => setDataItems(items)} className='bg-red-800 hover:bg-red-700 hover:text-white w-20 h-8 rounded-full shadow-sm flex justify-center items-center outline-none'>
-                    <li className='font-semibold text-[17px] md:text-lg text-white'>All</li>
+                    <li className='font-semibold text-[15px] md:text-lg text-white'>All</li>
                 </button>
                 <button onClick={() => filterCategory('meals')} className='bg-red-800 hover:bg-red-700 hover:text-white w-20 h-8 rounded-full shadow-sm flex justify-center items-center outline-none'>
-                    <li className='font-semibold text-[17px] md:text-lg text-white'>Meals</li>
+                    <li className='font-semibold text-[15px] md:text-lg text-white'>Meals</li>
                 </button>
                 <button onClick={() => filterCategory('snacks')} className='bg-red-800 hover:bg-red-700 hover:text-white w-20 h-8 rounded-full shadow-sm flex justify-center items-center outline-none'>
-                    <li className='font-semibold text-[17px] md:text-lg text-white'>Snacks</li>
+                    <li className='font-semibold text-[15px] md:text-lg text-white'>Snacks</li>
                 </button>
                 <button onClick={() => filterCategory('drinks')} className='bg-red-800 hover:bg-red-700 hover:text-white w-20 h-8 rounded-full shadow-sm justify-center items-center outline-none'>
-                    <li className='font-semibold text-[17px] md:text-lg text-white'>Drinks</li>
+                    <li className='font-semibold text-[15px] md:text-lg text-white'>Drinks</li>
                 </button>
             </ul>
         </div>
@@ -65,7 +61,7 @@ const Menu = () => {
             <div className='md:hidden ml-10 text-[17px] font-bold'>Popular Now</div>
             <div className='grid px-10 md:px-0 md:grid-cols-2 lg:grid-cols-4 gap-x-7 gap-y-6 md:gap-y-10 md:mt-10 overflow-hidden'>
                 {dataItems.map((item, index) => (
-                    <div key={index} className='border cursor-pointer bg-gray-100 pb-4 shadow-lg rounded-lg hover:scale-105 duration-300'>
+                    <div key={index} className='border cursor-pointer bg-gray-100 pb-4 shadow-lg rounded-lg hover:scale-90 duration-300'>
                         <img src={item.image} alt={item.name} className='w-full h-[200px] rounded-t-lg object-cover' />
                         <div className='flex flex-col items-center space-y-2 mt-1'>
                             <p className='font-bold'>{item.name}</p>
@@ -81,5 +77,5 @@ const Menu = () => {
     </div>
   )
 }
-// {cartItemAmount > 0 && <>({cartItemAmount})</>}
+
 export default Menu;
