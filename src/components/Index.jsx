@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import foodspace from '../assets/foodspace.png'
 import googleLogo from '../assets/googleLogo.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import * as yup from 'yup'
 import {AiOutlineLoading3Quarters} from 'react-icons/ai'
 
@@ -10,6 +10,8 @@ const Index = () => {
     let [loading, setLoading] = useState(false)
     let [errors, setErrors] = useState({})
     let [messages, setMessages] = useState('')
+
+    const navigate = useNavigate()
 
     let signUpSchema = yup.object().shape({
         email: yup.string().email('Must be a valid email address').required('Email is required'),
@@ -20,8 +22,7 @@ const Index = () => {
         let name = e.target.name
         let value = e.target.value
         
-        setForm({...form, [name]: value})
-        // console.log({[name]: value});
+        setForm({...form, [name]: value});
     }
 
     const handleSubmit = async(e) => {
@@ -33,6 +34,10 @@ const Index = () => {
             
             setMessages('Form submitted successfully')
             setLoading(true)
+
+            setTimeout(() => {
+                navigate('./heroPage')
+            }, 2000)
         } catch (error) {
             let newError = {}
             error.inner.forEach(e => {
