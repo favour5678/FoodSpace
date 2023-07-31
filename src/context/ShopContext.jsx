@@ -16,31 +16,31 @@ export const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart())
 
     useEffect(() => {
-        const cartData = localStorage.getItem('cartItems')
+        const cartData = localStorage.getItem('cartItem')
         if (cartData) {
             const parsedCart = JSON.parse(cartData)
             setCartItems(parsedCart)
         }
-    }, [cartItems])
+    }, [])
 
     const saveCartToLocalStorage = (cart) => {
         const cartJson = JSON.stringify(cart)
-        localStorage.setItem('cartItems', cartJson)
+        localStorage.setItem('cartItem', cartJson)
       }
 
     const addToCart = (itemId) => {
-        setCartItems(prevItem => (
-            {...prevItem, [itemId]: prevItem[itemId] + 1}))
-        saveCartToLocalStorage({
-            ...cartItems, [itemId]: cartItems[itemId] + 1
+        setCartItems(prevItems => {
+            const updatedCart = { ...prevItems, [itemId]: prevItems[itemId] + 1 }
+            saveCartToLocalStorage(updatedCart)
+            return updatedCart
         })
     }
 
     const removeFromCart = (itemId) => {
-        setCartItems(prevItem => (
-            {...prevItem, [itemId]: prevItem[itemId] - 1 }))
-        saveCartToLocalStorage({
-            ...cartItems, [itemId]: cartItems[itemId] - 1
+        setCartItems(prevItems => {
+            const updatedCart = { ...prevItems, [itemId]: prevItems[itemId] - 1 }
+            saveCartToLocalStorage(updatedCart)
+            return updatedCart
         })
     }
 
