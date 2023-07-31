@@ -25,7 +25,7 @@ export const ShopContextProvider = (props) => {
 
     const saveCartToLocalStorage = (cart) => {
         const cartJson = JSON.stringify(cart)
-        localStorage.setItem('cartItem', cartJson)
+        localStorage.setItem('cartItems', cartJson)
       }
 
     const addToCart = (itemId) => {
@@ -66,7 +66,7 @@ export const ShopContextProvider = (props) => {
         removeFromCart,
         updateItemCartAmount,
         getTotalCartAmount,
-        // saveCartToLocalStorage
+        saveCartToLocalStorage
     }
 
     // console.log(cartItems)
@@ -77,7 +77,3 @@ export const ShopContextProvider = (props) => {
     </ShopContext.Provider>
   )
 }
-
-// useEffect(() => {
-//     localStorage.setItem('cartItems', JSON.stringify(cartItems))
-// }, [cartItems])
