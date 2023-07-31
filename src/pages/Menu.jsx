@@ -23,7 +23,7 @@ const Menu = () => {
                 <p className='text-2xl font-semibold'>Our Menu</p>
                 <p className='font-medium'>We provide the best food service for you</p>
             </div>
-            <ul className='flex overflow-x-auto space-x-10 md:space-x-2 lg:space-x-4'>
+            <ul className='flex overflow-x-auto space-x-3 md:space-x-2 lg:space-x-4'>
                 <button onClick={() => setDataItems(items)} className='bg-red-800 hover:bg-red-700 hover:text-white w-20 h-8 rounded-full shadow-sm flex justify-center items-center outline-none'>
                     <li className='font-semibold text-[15px] md:text-lg text-white'>All</li>
                 </button>
