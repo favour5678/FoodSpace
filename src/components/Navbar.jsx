@@ -6,7 +6,7 @@ import { MdTrolley } from "react-icons/md"
 import { MdOutlinePrivacyTip } from "react-icons/md"
 import { BiHelpCircle } from "react-icons/bi"
 import { LiaSignOutAltSolid } from "react-icons/lia"
-import { AiOutlineCloseCircle } from "react-icons/ai"
+import { AiFillHome, AiOutlineCloseCircle } from "react-icons/ai"
 import { HashLink as Link } from 'react-router-hash-link'
 
 const Navbar = () => {
@@ -44,7 +44,7 @@ const Navbar = () => {
             <div>
                 <img src={foodspace} alt="foodspace logo" className='h-10'/>
             </div>
-            <Link>
+            <Link to={'storeCart'}>
                 <FaCartShopping className='text-xl text-gray-900 outline-none' />
             </Link>
             <div className={isOpen ? 'bg-red-700 h-screen w-1/2 absolute top-0 left-0 duration-1000' : 'bg-red-700 h-screen w-3/4 absolute top-0 left-[-100%] duration-1000'}>
@@ -52,12 +52,17 @@ const Navbar = () => {
                     <AiOutlineCloseCircle onClick={() => setIsOpen(!isOpen)} className='text-white text-2xl cursor-pointer' />
                 </div>
                 <div className='space-y-7 mt-16'>
+                    <Link to={'/heroPage'} className='flex items-center text-white space-x-3 px-2 outline-none'>
+                        <AiFillHome className='text-xl'/>
+                        <p>Home</p>
+                    </Link>
+                    <div className='border-t border-gray-300 w-[96%] mx-auto'></div>
                     <Link className='flex items-center text-white space-x-3 px-2 outline-none'>
                         <IoIosContact className='text-xl'/>
                         <p>Profile</p>
                     </Link>
                     <div className='border-t border-gray-300 w-[96%] mx-auto'></div>
-                    <Link className='flex items-center text-white space-x-3 px-2 outline-none'>
+                    <Link to={'storeCart'} className='flex items-center text-white space-x-3 px-2 outline-none'>
                         <MdTrolley className='text-xl'/>
                         <p>My Orders</p>
                     </Link>

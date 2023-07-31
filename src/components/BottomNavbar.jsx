@@ -20,4 +20,4 @@ const BottomNavbar = () => {
   )
 }
 
-export default BottomNavbar
+export default BottomNavbar;
