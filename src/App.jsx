@@ -1,5 +1,5 @@
 import { RouterProvider } from 'react-router-dom';
-import Router from "./routes/routing";
+import Router from "./routes/Routing";
 import { ShopContextProvider } from './context/ShopContext';
 
 function App() {
