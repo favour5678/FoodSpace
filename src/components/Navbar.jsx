@@ -47,7 +47,7 @@ const Navbar = () => {
             <Link to={'storeCart'}>
                 <FaCartShopping className='text-xl text-gray-900 outline-none' />
             </Link>
-            <div className={isOpen ? 'bg-red-700 h-screen w-1/2 absolute top-0 left-0 duration-1000' : 'bg-red-700 h-screen w-3/4 absolute top-0 left-[-100%] duration-1000'}>
+            <div className={isOpen ? 'bg-red-700 h-screen w-[60%] absolute top-0 left-0 duration-1000' : 'bg-red-700 h-screen w-3/4 absolute top-0 left-[-100%] duration-1000'}>
                 <div className='flex justify-end px-4 mt-7'>
                     <AiOutlineCloseCircle onClick={() => setIsOpen(!isOpen)} className='text-white text-2xl cursor-pointer' />
                 </div>
