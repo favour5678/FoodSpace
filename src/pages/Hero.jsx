@@ -48,7 +48,7 @@ const Hero = () => {
                                 <button className='px-2'>
                                     <CiSearch className='text-xl text-gray-300'/>
                                 </button>
-                                <input value={searchItem} onChange={e => setSearchItem(e.target.value)} type="text" placeholder='Search for a dish name e.g fufu' className='w-full outline-none bg-transparent py-[6px]'/>
+                                <input type="text" placeholder='Search for a dish name e.g fufu' className='w-full outline-none bg-transparent py-[6px]'/>
                             </label>
                             <button className='bg-red-700 w-9 h-9 flex items-center justify-center rounded-lg'>
                                 <BsSliders className='text-white text-xl'/>
