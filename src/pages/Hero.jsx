@@ -1,5 +1,4 @@
 import React from 'react'
-// import BottomNavbar from './BottomNavbar';
 import { BsSliders } from 'react-icons/bs'
 import { CiSearch } from 'react-icons/ci'
 import { MdOutlineAppRegistration } from 'react-icons/md'
@@ -18,6 +17,7 @@ const Hero = () => {
     const deliveryManImage = 'https://cdni.iconscout.com/illustration/premium/thumb/male-delivery-executive-wearing-food-delivery-backpack-4743175-3951678.png'
 
     const yamEggSauceImage = 'https://i.pinimg.com/564x/ef/d2/a5/efd2a5292f1213682f12ccd9a2daab56.jpg'
+    
     
   return (
     <div id='top'>
@@ -48,11 +48,11 @@ const Hero = () => {
                                 <button className='px-2'>
                                     <CiSearch className='text-xl text-gray-300'/>
                                 </button>
-                                <input type="text" placeholder='Search for a dish name e.g fufu' className='w-full outline-none bg-transparent py-[6px]'/>
+                                <input value={searchItem} onChange={e => setSearchItem(e.target.value)} type="text" placeholder='Search for a dish name e.g fufu' className='w-full outline-none bg-transparent py-[6px]'/>
                             </label>
-                            <div className='bg-red-700 w-9 h-9 flex items-center justify-center rounded-lg'>
+                            <button className='bg-red-700 w-9 h-9 flex items-center justify-center rounded-lg'>
                                 <BsSliders className='text-white text-xl'/>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
