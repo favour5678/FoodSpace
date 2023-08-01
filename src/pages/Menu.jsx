@@ -14,7 +14,7 @@ const Menu = () => {
         )
     };
 
-    const { addToCart, cartItems} = useContext(ShopContext)
+    const { addToCart } = useContext(ShopContext)
 
     return (
     <div id='menu' className='container md:px-3 lg:px-0 mx-auto -mt-6 md:pt-24'>

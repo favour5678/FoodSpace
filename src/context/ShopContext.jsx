@@ -1,7 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react'
 import { items } from '../data/items'
 
-
 export const ShopContext = createContext(null)
 
 const getDefaultCart = () => {
@@ -68,8 +67,6 @@ export const ShopContextProvider = (props) => {
         getTotalCartAmount,
         saveCartToLocalStorage
     }
-
-    // console.log(cartItems)
 
   return (
     <ShopContext.Provider value={contextValue}>
