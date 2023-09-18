@@ -60,7 +60,7 @@ const Navbar = () => {
           </Link>
           <Link to={"storeCart"} className="flex items-end">
             <FaCartShopping className="text-xl text-gray-700 font-semibold hover:text-gray-500 uppercase outline-none" />
-            <p className="text-xs md:text-sm font-semibold ml-1">{totalQuantity}</p>
+            <p className="text-sm font-semibold ml-1">{totalQuantity}</p>
           </Link>
         </div>
         <Link
@@ -91,8 +91,9 @@ const Navbar = () => {
         <div>
           <img src={foodspace} alt="foodspace logo" className="h-10" />
         </div>
-        <Link to={"storeCart"}>
+        <Link to={"storeCart"} className="flex items-end">
           <FaCartShopping className="text-xl text-gray-900 outline-none" />
+          <p className="text-xs font-semibold">{totalQuantity}</p>
         </Link>
         <div
           className={
