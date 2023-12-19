@@ -1,6 +1,6 @@
 import React from 'react'
 import { BsFillArrowUpCircleFill } from 'react-icons/bs'
-import { HashLink as Link } from 'react-router-hash-link'
+import { HashLink as Link } from "react-router-hash-link";
 
 export const ScrollToTop = () => {
   return (
