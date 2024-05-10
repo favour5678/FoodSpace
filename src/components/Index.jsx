@@ -57,11 +57,11 @@ const Index = () => {
             </div>
             <div className='space-y-4 mt-5'>
                 <div>
-                    <input onInput={handleChange} name='email' type="text" placeholder='Email address' className='w-full h-11 lg:h-14 border rounded-full outline-none placeholder:pl-3 shadow-md'/>
+                    <input onInput={handleChange} name='email' type="text" placeholder='Email address' className='w-full h-11 lg:h-14 border rounded-full outline-none pl-4 shadow-md'/>
                     <small className='text-red-500 font-medium tracking-wide'>{errors.email && errors.email}</small>
                 </div>
                 <div>
-                    <input onInput={handleChange} name='password' type="password" placeholder='Password' className='w-full border rounded-full h-11 lg:h-14 outline-none  placeholder:pl-3 shadow-md'/>
+                    <input onInput={handleChange} name='password' type="password" placeholder='Password' className='w-full border rounded-full h-11 lg:h-14 outline-none pl-4 shadow-md'/>
                     <small className='text-red-500 font-medium tracking-wide'>{errors.password && errors.password}</small>
                 </div>
             </div>
